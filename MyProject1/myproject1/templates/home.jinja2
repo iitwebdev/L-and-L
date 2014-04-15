@@ -1,0 +1,27 @@
+{% extends 'mytemplate.jinja2' %}
+{% block content %}
+   <section class="container clearfix">
+        <aside role="complementary">
+            <h2>Addtional info</h2>
+            <p>Vestibulum viverra <strong>consectetur enim vel rutrum</strong>. Mauris hendrerit sodales congue. Etiam malesuada nibh id sapien tincidunt vitae rhoncus nunc tincidunt.</p>
+            <p></p>
+            <p><a href="#">Перейти на верх страницы<span class="icon">:</span></a></p>
+        </aside>
+        <article class="post content">
+            <ul class="post-list">
+                <li>
+                    <h2><a href="">Nullam sed felis ac risus interdum euismod.</a></h2>
+                    <p> Aenean laoreet mollis tellus, at elementum nulla <strong>placerat sit amet. </strong> In hac habitasse platea dictumst. Vestibulum luctus congue magna a scelerisque.</p>
+                    <p><a href="#" class="more-link">Перейти на верх<span class="icon">:</span></a></p>
+                </li>
+                <li>
+                    <h2><a href="templates/blog.jinja2">Вставляем картинку</a></h2>
+                    <img src="static/mozg.png" alt="Мозг" />
+                    <p> Aenean laoreet mollis tellus, at elementum nulla <strong>placerat sit amet. </strong> In hac habitasse platea dictumst. Vestibulum luctus congue magna a scelerisque.</p>
+                    <p><a href="#" class="more-link">Перейти на верх<span class="icon">:</span></a></p>
+                </li>
+            </ul>
+        </article>
+   </section>
+    <!-- / #content -->
+{% endblock %}
