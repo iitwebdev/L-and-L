@@ -101,9 +101,9 @@ ul[role=navigation] li {
   margin: 0 0 0 10px;
 }
 ul[role=navigation] li a {
-  background: #ffb7df;
-  border: 1px solid #2495b4;
-  border-bottom: 0;
+  background: #2495b4;
+  /*border: 1px solid #2495b4;
+  border-bottom: 0;*/
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
   -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
@@ -120,7 +120,7 @@ ul[role=navigation] li a:active,
 ul[role=navigation] li a.activePage {
   border-color: #10253d;
   background: url(../static/polosa.png);
-  color: #ff0000;
+  color: #2fe1ff;
   -moz-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   -webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
