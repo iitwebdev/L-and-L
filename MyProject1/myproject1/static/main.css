@@ -101,7 +101,7 @@ ul[role=navigation] li {
   margin: 0 0 0 10px;
 }
 ul[role=navigation] li a {
-  background: #2495b4;
+  background: #b40f14;
   /*border: 1px solid #2495b4;
   border-bottom: 0;*/
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
@@ -253,9 +253,13 @@ footer[role=contentinfo] p {
   margin: 0 auto;
   width: 960px;
   font: 11px/16px Helvetica, Arial, Tahoma;
-  text-align: right;
   overflow: hidden;
 }
-footer[role=contentinfo] p .left {
+footer[role=contentinfo] p .leftfooter {
   text-align: left;
+}
+
+footer[role=contentinfo] p.rightfooter{
+    text-align: right;
+
 }
