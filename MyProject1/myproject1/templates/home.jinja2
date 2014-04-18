@@ -2,8 +2,28 @@
 {% block content %}
    <section class="container clearfix">
         <aside role="complementary">
-            <h2>Addtional info</h2>
-            <p>Vestibulum viverra <strong>consectetur enim vel rutrum</strong>. Mauris hendrerit sodales congue. Etiam malesuada nibh id sapien tincidunt vitae rhoncus nunc tincidunt.</p>
+            <h2>Вход, регистрация</h2>
+
+
+            <table>
+                <tr>
+                    <td>Никнэйм</td>
+                    <td><input type="text" name="userName" id="userName" value="{{ userName }}" required></td>
+                </tr>
+                <tr>
+                    <td>Пароль</td>
+                    <td><input type="text" name="password" id="password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" name="login" id='loginButton'>Войти</button>
+                        <button type="button" name="register" id="registerButton">Зарегистрироваться</button>
+                    </td>
+                </tr>
+            </table>
+
+
+
             <p></p>
             <p><a href="#">Перейти на верх страницы<span class="icon">:</span></a></p>
         </aside>
