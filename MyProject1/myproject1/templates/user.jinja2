@@ -1,4 +1,41 @@
 {% extends 'mytemplate.jinja2' %}
 {% block content %}
-    <h2>Личная база пользователя</h2>
+    <hgroup style="position: relative; text-align: center" ><h2>Профиль пользователя</h2></hgroup>
+    <div class="gap" style="height: 5px"></div>
+    <section role="userinfo">
+        <div class="avatar">
+            <span class="image"><img src="static\cat.jpg" alt=""/></span>
+        </div>
+        <div class="gap" style="height: 5px"></div>
+        <div class="lefttinfo">
+            <ul>
+                <div class="gap" style="height: 15px"></div>
+                <li>Никнейм</li>
+                <div class="gap" style="height: 10px"></div>
+                <li>Имя</li>
+                <div class="gap" style="height: 10px"></div>
+                <li>Фамилия</li>
+                <div class="gap" style="height: 10px"></div>
+                <li>Дата рождения</li>
+            </ul>
+        </div>
+
+        <hgroup> <h2>Добавить свою идею</h2> </hgroup>
+            <div class="gap" style="height: 5px"></div>
+            <textarea >
+
+            </textarea>
+            <div class="gap" style="height: 5px"></div>
+            <div>
+                <textarea>
+                </textarea>
+            </div>
+    </section>
+    <div class="gap" style="height: 100px"></div>
+
+
+
+
+
+
 {% endblock %}

@@ -138,8 +138,6 @@ section[role=banner] hgroup {
   -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-  border-top: 4px dotted #444;
-  border-bottom: 4px dotted #444;
   margin: 0 0 30px;
   padding: 20px 0;
 }
@@ -181,6 +179,7 @@ section[role=banner] article[role=main] aside {
   border: 3px solid rgba(0, 0, 0, 0.03);
   padding: 2px;
 }
+
 section[role=banner] article[role=main] aside:after {
   content: '';
   display: block;
@@ -261,5 +260,43 @@ footer[role=contentinfo] p .leftfooter {
 
 footer[role=contentinfo] p.rightfooter{
     text-align: right;
+}
+
+section[role=userinfo] {
+  background: url(../static/polosa.png);
+  width: 20%;
+  height: 500px;
+  margin: 0 auto;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  padding: 1px;
+}
+
+.lefttinfo {
+
+    font: bold 16px Helvetica, Arial, Tahoma;
+    color: #f9e446;
+    width: 260px;
+    margin: 0 auto;
+    margin-left: 10px;
 
 }
+
+.image {
+    position: relative;
+    top:5px;
+    left: 5px;
+}
+.rightinfo{
+    background: url(../static/polosa.png);
+    font: bold 16px Helvetica, Arial, Tahoma;
+    color: #f9e446;
+    width: 800px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 300px;
+    margin-bottom: 30px;
+
+}
+
