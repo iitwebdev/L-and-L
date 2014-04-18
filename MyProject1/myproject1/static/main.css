@@ -223,6 +223,14 @@ aside[role=complementary] h2 {
 aside[role=complementary] p {
   font-size: 11px;
 }
+/* это написано для отображения поиска идеи 2 окно справа*/
+aside[role=complementary1] {
+  border-left: 1px solid #e0e0e0;
+  display: table-cell;
+  padding: 10px 20px;
+  width: 380px;
+}
+
 .content {
   display: table-cell;
   padding: 10px 0 50px 30px;

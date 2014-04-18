@@ -1,4 +1,40 @@
 {% extends 'mytemplate.jinja2' %}
 {% block content %}
-    <h2>Основное определение</h2>
+   <section class="container clearfix">
+        <aside role="complementary">
+            <h2>Данные для поиска идеи</h2>
+            <table>
+                <tr>
+                    <td>Название</td>
+                    <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}" required></td>
+                </tr>
+                <tr>
+                    <td>Категория</td>
+                    <td><select name="category" id="category">
+                        <option value="1">Пункт 1</option>
+                        <option value="2">Пункт 2</option></select></td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                        <button type="submit" name="search" id="search">Найти</button>
+                    </td>
+                </tr>
+            </table>
+        </aside>
+
+        <aside role="complementary1">
+            <h2>10 самых популярных идей</h2>
+            <table border="2" >
+                <tr style="background-color: #f0f0f0; font-weight: bold">
+                    <td>Номер идеи</td>
+                    <td>Описание Идеи</td>
+                </tr>
+                <tr>
+                    <td>Идея №1</td>
+                    <td> От головы поможет только-ТОПОР</td>
+                </tr>
+            </table>
+
+        </aside>
+   </section>
 {% endblock %}
