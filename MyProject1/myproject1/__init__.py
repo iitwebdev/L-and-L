@@ -18,6 +18,7 @@ def main(global_config, **settings):
     config.add_jinja2_search_path("myproject1:templates")
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_route('home', '/')
+    config.add_route('page', '/page')
     config.add_route('user', '/user')
     config.scan()
     return config.make_wsgi_app()

@@ -101,9 +101,9 @@ ul[role=navigation] li {
   margin: 0 0 0 10px;
 }
 ul[role=navigation] li a {
-  background: #ffb7df;
-  border: 1px solid #2495b4;
-  border-bottom: 0;
+  background: #d59e5d;
+  /*border: 1px solid #2495b4;
+  border-bottom: 0;*/
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
   -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
@@ -120,7 +120,7 @@ ul[role=navigation] li a:active,
 ul[role=navigation] li a.activePage {
   border-color: #10253d;
   background: url(../static/polosa.png);
-  color: #ff0000;
+  color: #3aff21;
   -moz-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   -webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
@@ -138,8 +138,6 @@ section[role=banner] hgroup {
   -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-  border-top: 4px dotted #444;
-  border-bottom: 4px dotted #444;
   margin: 0 0 30px;
   padding: 20px 0;
 }
@@ -181,6 +179,7 @@ section[role=banner] article[role=main] aside {
   border: 3px solid rgba(0, 0, 0, 0.03);
   padding: 2px;
 }
+
 section[role=banner] article[role=main] aside:after {
   content: '';
   display: block;
@@ -224,6 +223,14 @@ aside[role=complementary] h2 {
 aside[role=complementary] p {
   font-size: 11px;
 }
+/* это написано для отображения поиска идеи 2 окно справа*/
+aside[role=complementary1] {
+  border-left: 1px solid #e0e0e0;
+  display: table-cell;
+  padding: 10px 20px;
+  width: 380px;
+}
+
 .content {
   display: table-cell;
   padding: 10px 0 50px 30px;
@@ -253,9 +260,51 @@ footer[role=contentinfo] p {
   margin: 0 auto;
   width: 960px;
   font: 11px/16px Helvetica, Arial, Tahoma;
-  text-align: right;
   overflow: hidden;
 }
-footer[role=contentinfo] p .left {
+footer[role=contentinfo] p .leftfooter {
   text-align: left;
 }
+
+footer[role=contentinfo] p.rightfooter{
+    text-align: right;
+}
+
+section[role=userinfo] {
+  background: url(../static/polosa.png);
+  width: 20%;
+  height: 500px;
+  margin: 0 auto;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  padding: 1px;
+}
+
+.lefttinfo {
+
+    font: bold 16px Helvetica, Arial, Tahoma;
+    color: #f9e446;
+    width: 260px;
+    margin: 0 auto;
+    margin-left: 10px;
+
+}
+
+.image {
+    position: relative;
+    top:5px;
+    left: 5px;
+}
+.rightinfo{
+    background: url(../static/polosa.png);
+    font: bold 16px Helvetica, Arial, Tahoma;
+    color: #f9e446;
+    width: 800px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 300px;
+    margin-bottom: 30px;
+
+}
+
