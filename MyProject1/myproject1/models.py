@@ -1,8 +1,9 @@
+import datetime
 from sqlalchemy import (
     Column,
-    Index,
     Integer,
     Text,
+    NUMERIC,
     )
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -18,14 +19,10 @@ DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 
 
-class MyModel(Base):
-    __tablename__ = 'models'
+class Idea(Base):
+    __tablename__ = 'ideas'
     id = Column(Integer, primary_key=True)
     name = Column(Text)
-    value = Column(Integer)
-
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
-
-Index('my_index', MyModel.name, unique=True, mysql_length=255)
+    category = Column(Text)
+    description = Column(Text)
+    rating = Column(NUMERIC(1,2))

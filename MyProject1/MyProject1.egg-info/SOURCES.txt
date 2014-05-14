@@ -18,13 +18,14 @@ myproject1/tests.py
 myproject1/views.py
 myproject1/scripts/__init__.py
 myproject1/scripts/initializedb.py
+myproject1/static/cat.jpg
 myproject1/static/chist.png
 myproject1/static/jquery-1.7.1.min.js
 myproject1/static/main.css
 myproject1/static/modernizr-2.5.2.min.js
 myproject1/static/mozg.jpg
-myproject1/static/mozg.png
 myproject1/static/polosa.png
 myproject1/static/raphaelicons.css
 myproject1/static/script.js
 myproject1/static/style.css
+myproject1/static/деда3.jpg

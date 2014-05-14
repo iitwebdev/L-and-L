@@ -1,5 +1,13 @@
 {% extends 'mytemplate.jinja2' %}
 {% block content %}
+
+   <section role="banner">
+       <hgroup>
+           <h1>это что.</h1>
+           <h2>Часть поиска</h2>
+       </hgroup>
+    </section>
+
    <section class="container clearfix">
         <aside role="complementary">
             <h2>Данные для поиска идеи</h2>
@@ -11,8 +19,10 @@
                 <tr>
                     <td>Категория</td>
                     <td><select name="category" id="category">
-                        <option value="1">Пункт 1</option>
-                        <option value="2">Пункт 2</option></select></td>
+                        {% for category in categories %}
+                        <option value="{{ category }}">{{ category }}</option>
+                        {% endfor %}
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="1">
@@ -21,6 +31,8 @@
                 </tr>
             </table>
         </aside>
+
+
 
         <aside role="complementary1">
             <h2>10 самых популярных идей</h2>
@@ -36,5 +48,23 @@
             </table>
 
         </aside>
+
+       <table border="3" style="margin: 0 auto;">
+           <tr style="background-color: #f0f0f0; font-weight: bold">
+               <th>Название</th>
+               <th>Категория</th>
+               <th>Описание</th>
+               <th>Оценка</th>
+           </tr>
+           {% for idea in all_ideas %}
+           <tr>
+               <td>{{ idea.name }}</td>
+               <td>{{ idea.category }}</td>
+               <td>{{ idea.description }}</td>
+               <td>{{ idea.rating }}</td>
+           </tr>
+           {% endfor %}
+       </table>
+
    </section>
 {% endblock %}
