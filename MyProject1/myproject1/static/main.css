@@ -101,7 +101,7 @@ ul[role=navigation] li {
   margin: 0 0 0 10px;
 }
 ul[role=navigation] li a {
-  background: #d59e5d;
+  background: #f9b555;
   /*border: 1px solid #2495b4;
   border-bottom: 0;*/
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
@@ -110,7 +110,7 @@ ul[role=navigation] li a {
   -moz-border-radius: 3px 3px 0 0;
   -webkit-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
-  color: #dfe9f2;
+  color: #38393b;
   display: block;
   padding: 7px 20px 5px;
 }
@@ -120,7 +120,7 @@ ul[role=navigation] li a:active,
 ul[role=navigation] li a.activePage {
   border-color: #10253d;
   background: url(../static/polosa.png);
-  color: #3aff21;
+  color: #2fe1ff;
   -moz-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   -webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
@@ -144,7 +144,7 @@ section[role=banner] hgroup {
 section[role=banner] hgroup h1, section[role=banner] hgroup h2 {
   margin: 0 auto;
   width: 960px;
-  color: #ffcc44;
+  color: #f9b555;
   font: bold 30px Helvetica, Arial, Tahoma;
   text-align: center;
   text-shadow: #000 0 1px 0;
@@ -205,7 +205,7 @@ section[role=banner] article[role=main] aside img {
   border-radius: 2px;
 }
 .more-link { /*Параметры отображения надписи перейти на верх*/
-  color: #009;
+  color: #000099;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -223,14 +223,6 @@ aside[role=complementary] h2 {
 aside[role=complementary] p {
   font-size: 11px;
 }
-/* это написано для отображения поиска идеи 2 окно справа*/
-aside[role=complementary1] {
-  border-left: 1px solid #e0e0e0;
-  display: table-cell;
-  padding: 10px 20px;
-  width: 380px;
-}
-
 .content {
   display: table-cell;
   padding: 10px 0 50px 30px;
@@ -267,44 +259,91 @@ footer[role=contentinfo] p .leftfooter {
 }
 
 footer[role=contentinfo] p.rightfooter{
-    text-align: right;
+    text-align: left;
 }
 
-section[role=userinfo] {
-  background: url(../static/polosa.png);
-  width: 20%;
-  height: 500px;
-  margin: 0 auto;
-  margin-left: 20px;
-  margin-bottom: 30px;
+section[role=userInfo] {
+  /*background: url("../static/chist.png");*/
+  width: 100%;
+  height: 455px;
+  position: relative;
+  left: 30px;
   padding: 1px;
 }
 
-.lefttinfo {
-
-    font: bold 16px Helvetica, Arial, Tahoma;
-    color: #f9e446;
-    width: 260px;
-    margin: 0 auto;
-    margin-left: 10px;
-
+.leftInfo {
+    background: #faf7f7;/*url("../static/polosa.png");*/
+    width: 300px;
+    height: 450px;
+    float: left;
+    border: 2px solid #505154;
+    border-radius: 3px;
 }
 
 .image {
-    position: relative;
-    top:5px;
-    left: 5px;
 }
-.rightinfo{
-    background: url(../static/polosa.png);
+
+#nameList {
+    position: relative;
+    top: 15px;
+    font: bold 15px Helvetica, Arial, Tahoma;
+    color: #f9b555;
+    text-align: left;
+    line-height: 30px;
+    list-style-type: none;
+}
+
+.rightInfo{
+    background: #faf7f7; /*url("../static/polosa.png");*/
+    float: left;
     font: bold 16px Helvetica, Arial, Tahoma;
-    color: #f9e446;
-    width: 800px;
-    height: 500px;
+    color: #3891cf;
+    width: 950px;
+    height: 450px;
     position: relative;
-    margin: 0 auto;
-    margin-left: 300px;
-    margin-bottom: 30px;
-
+    left: 30px;
+    border: 2px solid #505154;
+    border-radius: 3px;
 }
 
+.orange_font {
+    font: bold 24px Helvetica, Arial, Tahoma;
+    color: #f9b555;
+}
+
+#newIdea {
+    margin-top: 30px;
+    margin-left: 10px;
+    line-height: 50px;
+    list-style-type: none;
+}
+
+.name {
+    height: 20px;
+    width: 220px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    border: 2px solid #505154;
+}
+
+#descr {
+    float: left;
+    position: relative;
+    left: 100px;
+    top:30px;
+    line-height: 40px;
+}
+
+.ideasList{
+    position: relative;
+    top: 20px;
+    left: 30px;
+    height: 400px;
+    width: 1285px;
+    border: 2px solid #505154;
+}
+
+.clear {
+    clear: left;
+}
