@@ -55,6 +55,8 @@
                <th>Категория</th>
                <th>Описание</th>
                <th>Оценка</th>
+               <th>Дата заполнения</th>
+               <th>Автор</th>
            </tr>
            {% for idea in all_ideas %}
            <tr>
@@ -62,9 +64,13 @@
                <td>{{ idea.category }}</td>
                <td>{{ idea.description }}</td>
                <td>{{ idea.rating }}</td>
+               <td>{{ idea.date }}</td>
+               <td>{{ idea.avtor }}</td>
            </tr>
            {% endfor %}
        </table>
+
+   <td> </td>
 
    </section>
 {% endblock %}

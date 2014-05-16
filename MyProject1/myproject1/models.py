@@ -3,7 +3,9 @@ from sqlalchemy import (
     Column,
     Integer,
     Text,
-    NUMERIC,
+    Numeric,
+    DateTime,
+    String,
     )
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -25,4 +27,6 @@ class Idea(Base):
     name = Column(Text)
     category = Column(Text)
     description = Column(Text)
-    rating = Column(NUMERIC(1,2))
+    rating = Column(Numeric(1,2))
+    date = Column(DateTime)
+    avtr = Column(String(26))
