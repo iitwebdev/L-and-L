@@ -247,14 +247,12 @@ footer[role=contentinfo] {
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
   color: #dfe9f2;
   padding: 10px 0;
-margin-top: 500px;
 }
 footer[role=contentinfo] p {
   margin: 0 auto;
   width: 960px;
   font: 11px/16px Helvetica, Arial, Tahoma;
   overflow: hidden;
-
 }
 footer[role=contentinfo] p .leftfooter {
   text-align: left;
@@ -268,13 +266,12 @@ section[role=userInfo] {
   /*background: url("../static/chist.png");*/
   width: 100%;
   height: 455px;
-  position: absolute;
+  position: relative;
   left: 30px;
   padding: 1px;
 }
 
 .leftInfo {
-    position: absolute;
     background: #faf7f7;/*url("../static/polosa.png");*/
     width: 300px;
     height: 450px;
@@ -303,8 +300,8 @@ section[role=userInfo] {
     color: #3891cf;
     width: 950px;
     height: 450px;
-    position: absolute;
-    left: 330px;
+    position: relative;
+    left: 30px;
     border: 2px solid #505154;
     border-radius: 3px;
 }
@@ -340,23 +337,13 @@ section[role=userInfo] {
 
 .ideasList{
     position: relative;
-    top: 500px;
+    top: 20px;
     left: 30px;
     height: 400px;
     width: 1285px;
     border: 2px solid #505154;
 }
 
-.search{
-    line-height: 35px;
-    text-align: left;
-}
-
-aside [role="complementary1"]{
-    margin: 0 auto;
-    margin-left: 500px;
-
-}
 .clear {
     clear: left;
 }
