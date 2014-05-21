@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="static/raphaelicons.css">
     <link rel="stylesheet" href="static/main.css">
     <script src="static/modernizr-2.5.2.min.js"></script>
+    <script src="static/common.js"></script>
 
 {#    {% block head %}{% endblock %}#}
 </head>
@@ -30,6 +31,10 @@
           </ul>
         </nav>
       </div>
+      {% if 'user'in request.session %}
+        <h3 style="color: white">Привет {{ request.session['user'].userName }} !!!</h3>
+          <button onclick="logout();">Выход</button>
+      {% endif %}
   </header>
 
   <div id="content">
