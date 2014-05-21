@@ -1,0 +1,21 @@
+
+<table border="2" style="position: relative; top: 30px; left: 30px; text-align: center">
+   <tr style="background-color: #f0f0f0; font-weight: bold;">
+       <th>Название</th>
+       <th>Категория</th>
+       <th>Описание</th>
+       <th>Оценка</th>
+       <th>Дата заполнения</th>
+       <th>Автор</th>
+   </tr>
+   {% for idea in all_ideas %}
+   <tr>
+       <td>{{ idea.name }}</td>
+       <td>{{ idea.category }}</td>
+       <td>{{ idea.description }}</td>
+       <td>{{ idea.rating }}</td>
+       <td>{{ idea.date }}</td>
+       <td>{{ idea.user.userName }}</td>
+   </tr>
+   {% endfor %}
+</table>

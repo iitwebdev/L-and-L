@@ -18,8 +18,16 @@
             </ul>
         </div>
 
+        <form method="POST">
         <div class="rightInfo">
             <span class="orange_font" style="position: relative; left: 300px">Добавьте свою идею</span>
+            {% if messages is defined %}
+                {% for message in messages %}
+                    <p>
+                     {{ message }}
+                    </p>
+                {% endfor %}
+            {% endif %}
                 <div style="height: 5px"></div>
                 <table style="line-height: 40px; position: relative; left: 30px; top: 30px;float: left;">
                     <tr>
@@ -35,10 +43,12 @@
                                 <option value="3">Пункт 3</option>
                             </select>
                         </td>
+
+                        <tr><input type="text" name="newCategory"></tr>
                     </tr>
                     <tr>
                         <td>
-                            <button>Добавить</button>
+                            <button type="submit" name="addIdea">Добавить</button>
                         </td>
                     </tr>
                 </table>
@@ -50,26 +60,19 @@
                     </tr>
                     <tr>
                         <td>
-                            <textarea style="position: relative; top:10px; height: 300px;width: 500px"></textarea>
+                            <textarea name="description" style="position: relative; top:10px; height: 300px;width: 500px"></textarea>
                         </td>
                     </tr>
                 </table>
             </div>
             <div class="clear"></div>
         </div>
+            </form>
     </section>
 
     <div class = "ideasList">
         <span class="orange_font" style="position: relative; left: 50px; top: 20px;"> Мои идеи </span>
-        <table border="2" style="position: relative; top: 30px; left: 30px; text-align: center">
-            <tr style="background-color: #f0f0f0; font-weight: bold;">
-                <td style="width: 50px;">№</td>
-                <td style="width: 200px;">Название</td>
-                <td style="width: 200px;">Категория</td>
-                <td style="width: 100px;">Средняя оценка</td>
-                <td style="width: 400px;">Комментарии</td>
-            </tr>
-        </table>
+{% include "ideasTable.jinja2" %}
     </div>
 
     <div class="gap" style="height: 100px"></div>

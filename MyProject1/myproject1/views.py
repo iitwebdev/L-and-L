@@ -37,7 +37,14 @@ def page_view(request):
 
 @view_config(route_name='user', renderer='templates/user.jinja2')
 def user_view(request):
-    return {'project': 'MyProject1'}
+    user = 'user' in request.session and request.session['user']
+    if user:
+        DBSession.add(user)
+    response = {'all_ideas': user.ideas if user else []}
+    if 'addIdea' in request.POST:
+        response["messages"] = Idea.addNew(request)
+    return response
+
 
 @view_config(route_name='logout', renderer='string')
 def logout(request):

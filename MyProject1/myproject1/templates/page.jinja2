@@ -49,26 +49,8 @@
 
         </aside>
 
-       <table border="3" style="margin: 0 auto;">
-           <tr style="background-color: #f0f0f0; font-weight: bold">
-               <th>Название</th>
-               <th>Категория</th>
-               <th>Описание</th>
-               <th>Оценка</th>
-               <th>Дата заполнения</th>
-               <th>Автор</th>
-           </tr>
-           {% for idea in all_ideas %}
-           <tr>
-               <td>{{ idea.name }}</td>
-               <td>{{ idea.category }}</td>
-               <td>{{ idea.description }}</td>
-               <td>{{ idea.rating }}</td>
-               <td>{{ idea.date }}</td>
-               <td>{{ idea.author }}</td>
-           </tr>
-           {% endfor %}
-       </table>
+{% include "ideasTable.jinja2" %}
+
 
    <td> </td>
 
