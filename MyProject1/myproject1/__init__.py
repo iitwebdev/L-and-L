@@ -14,6 +14,7 @@ def main(global_config, **settings):
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
     Base.metadata.bind = engine
+
     config = Configurator(settings=settings)
     config.include('pyramid_jinja2')
     config.add_jinja2_search_path("myproject1:templates")

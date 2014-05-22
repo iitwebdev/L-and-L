@@ -1,14 +1,16 @@
 #coding: utf-8
-import datetime
-from pyramid.response import Response
 from pyramid.view import view_config
 
-from pyramid.security import forget
+from .models import DBSession, Idea
+from .models import User
 
-from sqlalchemy.exc import DBAPIError
 
-from .models import DBSession, Idea, Base
-from .models import User, get_base, get_db_session, get_engine
+def bindUser(fn):
+    def wrapped(request):
+        if 'user' in request.session:
+            DBSession.add(request.session['user'])
+        return fn(request)
+    return wrapped
 
 
 @view_config(route_name='home', renderer='templates/home.jinja2')
@@ -26,16 +28,13 @@ def my_view(request):
 
 
 @view_config(route_name='page', renderer='templates/page.jinja2')
+@bindUser
 def page_view(request):
-    all_ideas = DBSession.query(Idea).all()
-    categories = list()
-    for idea in all_ideas:
-        if idea.category and not idea.category in categories:
-            categories.append(idea.category)
-    return {'all_ideas': all_ideas, 'categories': categories}
+    return {'all_ideas': Idea.allIdeas(), 'categories': Idea.getCategories()}
 
 
 @view_config(route_name='user', renderer='templates/user.jinja2')
+@bindUser
 def user_view(request):
     user = 'user' in request.session and request.session['user']
     if user:
@@ -43,6 +42,7 @@ def user_view(request):
     response = {'all_ideas': user.ideas if user else []}
     if 'addIdea' in request.POST:
         response["messages"] = Idea.addNew(request)
+    response["categories"] = Idea.getCategories()
     return response
 
 

@@ -38,9 +38,9 @@
                     <tr>
                         <td>Категория</td>
                         <td><select name="category" id="category" style="position: relative; left: 20px; width: 150px">
-                                <option value="1">Пункт 1</option>
-                                <option value="2">Пункт 2</option>
-                                <option value="3">Пункт 3</option>
+                            {% for category in categories %}
+                                   <option value="category">{{ category }}</option>
+                            {% endfor %}
                             </select>
                         </td>
 

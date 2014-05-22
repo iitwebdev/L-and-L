@@ -23,23 +23,23 @@ from zope.sqlalchemy import ZopeTransactionExtension
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 
-Base = declarative_base()
-engine = create_engine('sqlite:///gen_tree.db')
-DBSession.configure(bind=engine)
-Base.metadata.bind = engine
-Base.metadata.create_all(engine)
+# Base = declarative_base()
+# engine = create_engine('sqlite:///gen_tree.db')
+# DBSession.configure(bind=engine)
+# Base.metadata.bind = engine
+# Base.metadata.create_all(engine)
 
 
-def get_base():
-    return Base
-
-
-def get_db_session():
-    return DBSession()
-
-
-def get_engine():
-    return engine
+# def get_base():
+#     return Base
+#
+#
+# def get_db_session():
+#     return DBSession()
+#
+#
+# def get_engine():
+#     return engine
 
 
 class Idea(Base):
@@ -83,6 +83,18 @@ class Idea(Base):
         else:
             return [u"Чтобы добавить идею нужно войти"]
 
+    @classmethod
+    def getCategories(cls):
+        all_ideas = cls.allIdeas()
+        categories = list()
+        for idea in all_ideas:
+            if idea.category and not idea.category in categories:
+                categories.append(idea.category)
+        return categories
+
+    @classmethod
+    def allIdeas(cls):
+        return DBSession.query(Idea).all()
 
 
 class User(Base):
@@ -128,3 +140,4 @@ class User(Base):
     def logout(cls, request):
         if 'user' in request.session:
             del request.session['user']
+
