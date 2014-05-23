@@ -1,5 +1,6 @@
 # coding: utf8
 import datetime
+from unicodedata import category
 
 from sqlalchemy import (
     Column,
@@ -8,7 +9,8 @@ from sqlalchemy import (
     Numeric,
     DateTime,
     String,
-    ForeignKey)
+    ForeignKey,
+    Table, or_, and_)
 from sqlalchemy import create_engine
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -41,16 +43,21 @@ Base = declarative_base()
 # def get_engine():
 #     return engine
 
+likes = Table('likes', Base.metadata,
+              Column('idea_id', Integer, ForeignKey('ideas.id', onupdate='CASCADE', ondelete='CASCADE')),
+              Column('user_id', Integer, ForeignKey('user.id', onupdate='CASCADE', ondelete='CASCADE')))
+
 
 class Idea(Base):
     __tablename__ = 'ideas'
     id = Column(Integer, primary_key=True)
-    name = Column(Text)
-    category = Column(Text)
+    name = Column(String)
+    category = Column(String)
     description = Column(Text)
     rating = Column(Numeric(1,2), default=0)
     date = Column(DateTime, default=datetime.datetime.utcnow)
     user_id = Column(Integer, ForeignKey('user.id', onupdate="CASCADE", ondelete='SET NULL'))
+    users_like = relationship('User', secondary=likes, backref='liked_ideas')
 
     def ideaValidation(self):
         message = list()
@@ -82,6 +89,21 @@ class Idea(Base):
             return message
         else:
             return [u"Чтобы добавить идею нужно войти"]
+
+    @classmethod
+    def searchIdea(cls, request):
+        category = 'category' in request.POST and request.POST['category']
+        nameIdeas = 'ideasName' in request.POST and request.POST['ideasName']
+        query = DBSession.query(Idea)
+        conditions = []
+
+        if category:
+            conditions.append(Idea.category == category)
+        if nameIdeas:
+            conditions.append(Idea.name.like('%' + nameIdeas + '%'))
+
+        condition = and_(*conditions)
+        return query.filter(condition).all()
 
     @classmethod
     def getCategories(cls):
@@ -140,4 +162,3 @@ class User(Base):
     def logout(cls, request):
         if 'user' in request.session:
             del request.session['user']
-
