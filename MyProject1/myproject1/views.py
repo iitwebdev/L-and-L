@@ -30,7 +30,9 @@ def my_view(request):
 @view_config(route_name='page', renderer='templates/page.jinja2')
 @bindUser
 def page_view(request):
-    return {'all_ideas': Idea.allIdeas(), 'categories': Idea.getCategories()}
+    response = {'categories': Idea.getCategories(),
+                'all_ideas': Idea.searchIdea(request) if 'search' in request.POST else Idea.allIdeas()}
+    return response
 
 
 @view_config(route_name='user', renderer='templates/user.jinja2')
@@ -54,3 +56,10 @@ def logout(request):
         return "error"
     else:
         return 'OK'
+
+
+# @view_config(route_name='likeIdea', renderer='string')
+# def likeIdea(request):
+#     response = ''
+#     if 'ideaId' in request.params:
+#         user = 'user' in request.session
