@@ -10,6 +10,7 @@
         <form method="POST">
         <div class="rightInfo">
             <p class="orange_font">Добавьте свою идею</p>
+        <p class="message">
             {% if messages is defined %}
                 {% for message in messages %}
                     <p>
@@ -17,6 +18,8 @@
                     </p>
                 {% endfor %}
             {% endif %}
+        </p>
+
 
             <div style="height: 5px"></div>
 
@@ -60,8 +63,8 @@
 
 
     <div class = "ideasList">
-        <span class="orange_font" style="position: relative; left: 130px; top: 20px;"> Список моих идей </span>
-    {% include "ideasTable.jinja2" %}
+        <span class="orange_font" style="position: relative; left: 400px; top: 20px;"> Список моих идей </span>
+        <div style="position: relative; left: 300px">{% include "ideasTable.jinja2" %}</div>
     </div>
 
     <div class="gap" style="height: 100px"></div>
