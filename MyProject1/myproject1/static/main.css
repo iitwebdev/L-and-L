@@ -132,6 +132,7 @@ ul[role=navigation] li a .icon {
 section[role=banner] {
   background: url(../static/chist.png);
   border-bottom: 1px solid #dfe9f2;
+  height: 100px;
 }
 section[role=banner] hgroup {
   background: url(../static/chist.png);
@@ -139,7 +140,7 @@ section[role=banner] hgroup {
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
   margin: 0 0 30px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 section[role=banner] hgroup h1, section[role=banner] hgroup h2 {
   margin: 0 auto;
@@ -240,18 +241,20 @@ section[role="banner"] article[role="main"].contact .post {
   width: 35%;
 }
 footer[role=contentinfo] {
-  background: url(../static/polosa.png);
-  border-top: 4px dotted #444;
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-  box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-  color: #dfe9f2;
-  padding: 10px 0;
-margin-top: 500px;
+    position: relative;
+    top:800px;
+    background: url(../static/polosa.png);
+    border-top: 4px dotted #444;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
+    color: #dfe9f2;
+    padding: 10px 0;
+    margin-top: 500px;
+    width: 100%;
 }
 footer[role=contentinfo] p {
   margin: 0 auto;
-  width: 960px;
   font: 11px/16px Helvetica, Arial, Tahoma;
   overflow: hidden;
 
@@ -261,16 +264,16 @@ footer[role=contentinfo] p .leftfooter {
 }
 
 footer[role=contentinfo] p.rightfooter{
-    text-align: left;
+    text-align: right;
 }
 
 section[role=userInfo] {
+  background-color: #f5f5f5;
   /*background: url("../static/chist.png");*/
   width: 100%;
-  height: 455px;
+  height: 450px;
   position: absolute;
-  left: 30px;
-  padding: 1px;
+  padding: 5px;
 }
 
 .leftInfo {
@@ -297,21 +300,26 @@ section[role=userInfo] {
 }
 
 .rightInfo{
-    background: #faf7f7; /*url("../static/polosa.png");*/
-    float: left;
-    font: bold 16px Helvetica, Arial, Tahoma;
+    font: bold 15px Helvetica, Arial, Tahoma;
     color: #3891cf;
-    width: 950px;
+    width: 100%;
     height: 450px;
     position: absolute;
-    left: 330px;
-    border: 2px solid #505154;
-    border-radius: 3px;
 }
 
+.line {
+    width: 95%;
+    height: 1px;
+    background-color: #9ea0a6;
+    position: relative;
+    left: 30px;
+    top: 455px;
+}
 .orange_font {
     font: bold 24px Helvetica, Arial, Tahoma;
     color: #f9b555;
+    position: relative;
+    text-align: center;
 }
 
 #newIdea {
@@ -331,20 +339,24 @@ section[role=userInfo] {
 }
 
 #descr {
-    float: left;
     position: relative;
-    left: 100px;
-    top:30px;
+    left: 200px;
+    top:10px;
     line-height: 40px;
 }
 
-.ideasList{
+#descript {
     position: relative;
-    top: 500px;
-    left: 30px;
+    height: 200px;
+    width: 300px
+}
+
+.ideasList{
+    position: absolute;
+    top: 700px;
+    left: 400px;
     height: 400px;
     width: 1285px;
-    border: 2px solid #505154;
 }
 
 .search{

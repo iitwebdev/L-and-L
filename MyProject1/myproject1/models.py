@@ -66,7 +66,7 @@ class Idea(Base):
         if not self.category:
             message.append(u"Выберите категорию или введите свою")
         if not self.description:
-            message.append(u"Напишите описание вашей идеи")
+            message.append(u"Опишите вашу идею")
         return message if message else None
 
     @classmethod
