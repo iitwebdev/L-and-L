@@ -9,40 +9,29 @@
     <section role="userInfo">
         <form method="POST">
         <div class="rightInfo">
-            <p class="orange_font">Добавьте свою идею</p>
-            {% if messages is defined %}
-                {% for message in messages %}
-                    <p>
-                     {{ message }}
-                    </p>
-                {% endfor %}
-            {% endif %}
-
+            <p class="orange_font">{{ ideasName }}</p>
+                    <p> egrfergerg </p>
             <div style="height: 5px"></div>
 
             <table style="line-height: 40px; position: absolute; left: 400px; top: 80px; ">
                 <tr>
                     <td>Название</td>
                     <td><input type="text" name="ideasName" id="ideasName" style="position: relative; left: 20px; width: 150px;"
-                               value="{{ ideasName }}" required></td>
+                               value="название_идеи"></td>
                 </tr>
+
                 <tr>
                     <td>Категория</td>
-                    <td><select name="category" id="category" style="position: relative; left: 20px; width: 155px">
-                        {% for category in categories %}
-                               <option value="{{ category }}">{{ category }}</option>
-                        {% endfor %}
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Добавить свою категорию</td>
                     <td>
                         <input type="text" id="categoryName" style="position: relative; left: 20px; width: 150px;">
                     </td>
                 </tr>
-
                 <tr>
+                    <td>Автор: </td>
+                    <td>имя_пользователя</td>
+                </tr>
+                <tr>
+
                     <td>
                         <textarea name="description" id="descript" style="top:10px;">Описание...</textarea>
                     </td>
@@ -50,8 +39,8 @@
             </table>
 
             <button type="submit" name="addIdea" style="position: absolute; left: 800px; top: 220px">Добавить</button>
-
-
+            <button type="submit" name="estimate">Оценить идею</button>
+            
             <div class="clear"></div>
         </div>
             </form>
@@ -60,10 +49,6 @@
 <div class="line"></div>
 
 
-    <div class = "ideasList">
-        <span class="orange_font" style="position: relative; left: 130px; top: 20px;"> Список моих идей </span>
-    {% include "ideasTable.jinja2" %}
-    </div>
 
     <div class="gap" style="height: 100px"></div>
 {% endblock %}

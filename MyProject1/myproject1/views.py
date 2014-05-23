@@ -58,8 +58,6 @@ def logout(request):
         return 'OK'
 
 
-# @view_config(route_name='likeIdea', renderer='string')
-# def likeIdea(request):
-#     response = ''
-#     if 'ideaId' in request.params:
-#         user = 'user' in request.session
+@view_config(route_name='description', renderer='templates/description.jinja2')
+def description_view(request):
+    return {'categories': ""}
