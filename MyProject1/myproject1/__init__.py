@@ -23,6 +23,7 @@ def main(global_config, **settings):
     config.add_route('home', '/')
     config.add_route('page', '/page')
     config.add_route('user', '/user')
+    config.add_route('user2', '/user2')
     config.add_route('logout', '/logout')
     config.add_route('description', '/description')
 

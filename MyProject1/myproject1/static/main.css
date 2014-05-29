@@ -114,12 +114,11 @@ ul[role=navigation] li a {
   display: block;
   padding: 7px 20px 5px;
 }
-ul[role=navigation] li a:hover,
-ul[role=navigation] li a:focus,
-ul[role=navigation] li a:active,
+ul[role=navigation] li a:hover {background-color: #f9ca6f}
+ul[role=navigation] li a:focus
+ul[role=navigation] li a:active
 ul[role=navigation] li a.activePage {
   border-color: #10253d;
-  background: url(../static/polosa.png);
   color: #2fe1ff;
   -moz-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   -webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
@@ -129,6 +128,7 @@ ul[role=navigation] li a .icon {
   padding-right: 10px;
   font-size: 17px;
 }
+
 section[role=banner] {
   background: url(../static/chist.png);
   border-bottom: 1px solid #dfe9f2;
@@ -211,14 +211,13 @@ section[role=banner] article[role=main] aside img {
   white-space: nowrap;
 }
 aside[role=complementary] {
-  background: #f0f0f0;
-  border-right: 1px solid #e0e0e0;
+  background: #fafafa;
   display: table-cell;
   padding: 10px 20px;
-  width: 180px;
+  width: 1000px;
 }
 aside[role=complementary] h2 {
-  font-size: 16px;
+  font-size: 20px;
   color: black;
 }
 aside[role=complementary] p {
@@ -242,7 +241,6 @@ section[role="banner"] article[role="main"].contact .post {
 }
 footer[role=contentinfo] {
     position: relative;
-    top:800px;
     background: url(../static/polosa.png);
     border-top: 4px dotted #444;
     -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
@@ -250,8 +248,8 @@ footer[role=contentinfo] {
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
     color: #dfe9f2;
     padding: 10px 0;
-    margin-top: 500px;
-    width: 100%;
+    margin-top: 800px;
+
 }
 footer[role=contentinfo] p {
   margin: 0 auto;
@@ -270,7 +268,8 @@ footer[role=contentinfo] p.rightfooter{
 section[role=userInfo] {
   background-color: #f5f5f5;
   /*background: url("../static/chist.png");*/
-  width: 100%;
+  width: 95%;
+    left: 30px;
   height: 450px;
   position: absolute;
   padding: 5px;
@@ -284,9 +283,6 @@ section[role=userInfo] {
     float: left;
     border: 2px solid #505154;
     border-radius: 3px;
-}
-
-.image {
 }
 
 #nameList {
@@ -352,23 +348,70 @@ section[role=userInfo] {
 }
 
 .ideasList{
-    position: absolute;
-    top: 700px;
-    left: 400px;
-    height: 400px;
-    width: 1285px;
+    background-color:  #fafafa;
 }
 
-.search{
+.new_idea_append{
     line-height: 35px;
     text-align: left;
+    margin: 10px;
+    position: relative;
+    left: 250px;
 }
 
-aside [role="complementary1"]{
-    margin: 0 auto;
-    margin-left: 500px;
+#add_new_idea
+{
+    margin: 10px;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.list
+{
+    position: relative;
+    left: 200px;
+    width:500px;
+    height: 300px
+}
+
+.hello
+{
+    color: #41b8f7;
+    position: relative;
+    top: 200px;
+    left:-100px;
+    margin: 10px;
+}
+
+.search
+{
 
 }
+
+div [role="complementary1"]{
+    margin: 20px;
+    float: left;
+    background-color:  #fafafa;
+}
+
+.idea_info{
+    line-height: 35px;
+    text-align: left;
+    margin: 10px;
+    position: relative;
+    left: 150px;
+
+}
+
+.message {
+    position: absolute;
+    left: 600px;
+    top: 500px;
+    color: #ff563a;
+}
+
 .clear {
     clear: left;
 }

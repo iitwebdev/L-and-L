@@ -2,14 +2,14 @@
 {% block content %}
     <section role="banner">
         <hgroup>
-        <h1>РњРѕРё РёРґРµРё</h1>
+        <h1>Мои идеи</h1>
     </hgroup>
     <div style="position: relative; top:10px; height: 10px; background-color: #FFFFFF"></div>
     </section>
     <section role="userInfo">
         <form method="POST">
         <div class="rightInfo">
-            <p class="orange_font">Р”РѕР±Р°РІСЊС‚Рµ СЃРІРѕСЋ РёРґРµСЋ</p>
+            <p class="orange_font">Добавьте свою идею</p>
         <div class="message">
             {% if messages is defined %}
                 {% for message in messages %}
@@ -25,21 +25,21 @@
 
             <table style="line-height: 40px; position: absolute; left: 400px; top: 80px; ">
                 <tr>
-                    <td>РќР°Р·РІР°РЅРёРµ</td>
+                    <td>Название</td>
                     <td><input type="text" name="ideasName" id="ideasName" style="position: relative; left: 20px; width: 150px;"
                                value="{{ ideasName }}" ></td>
                 </tr>
                 <tr>
-                    <td>РљР°С‚РµРіРѕСЂРёСЏ</td>
+                    <td>Категория</td>
                     <td><select name="category" id="category" style="position: relative; left: 20px; width: 155px">
                         {% for category in categories %}
-                               <option value="{{ category }}">{{ category }}</option>
+                               <option value="category">{{ category }}</option>
                         {% endfor %}
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>Р”РѕР±Р°РІРёС‚СЊ СЃРІРѕСЋ РєР°С‚РµРіРѕСЂРёСЋ</td>
+                    <td>Добавить свою категорию</td>
                     <td>
                         <input type="text" id="categoryName" style="position: relative; left: 20px; width: 150px;">
                     </td>
@@ -47,13 +47,12 @@
 
                 <tr>
                     <td>
-                        <textarea name="description" id="descript" style="top:10px;" placeholder="РћРїРёСЃР°РЅРёРµ..."></textarea>
+                        <textarea name="description" id="descript" style="top:10px;" placeholder="Описание..."></textarea>
                     </td>
                 </tr>
             </table>
 
-            <button type="submit" name="addIdea" style="position: absolute; left: 800px; top: 220px">Р”РѕР±Р°РІРёС‚СЊ</button>
-
+            <button type="submit" name="addIdea" style="position: absolute; left: 800px; top: 220px">Добавить</button>
 
             <div class="clear"></div>
         </div>
@@ -64,7 +63,7 @@
 
 
     <div class = "ideasList">
-        <span class="orange_font" style="position: relative; left: 400px; top: 20px;"> РЎРїРёСЃРѕРє РјРѕРёС… РёРґРµР№ </span>
+        <span class="orange_font" style="position: relative; left: 400px; top: 20px;"> Список моих идей </span>
         <div style="position: relative; left: 300px">{% include "ideasTable.jinja2" %}</div>
     </div>
 
