@@ -7,45 +7,55 @@
                 <table class="new_idea_append">
                     <tr>
                         <td>Название</td>
-                        <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"
+                        <td><input type="text" name="ideasName" id="ideasName" value="{{ idea.name }}"
                                    style="width: 130px;position: relative; left:100px;"></td>
                     </tr>
                     <tr>
                         <td>Категория</td>
                         <td>
-                            <input type="text" style="position: relative; left:100px; width: 130px">
+                            <input type="text" style="position: relative; left:100px; width: 130px" value="{{ idea.category }}">
                         </td>
                     </tr>
                     <tr>
                         <td>Автор: </td>
-                        <td style="position: relative; left:100px;">имя_пользователя</td>
+                        <td>
+{#                            style="position: relative; left:100px;">{{ idea.user }}#}
+                            <input type="text" style="position: relative; left:100px; width: 130px" value="{{ idea.user.userName }}">
+                        </td>
                     </tr>
                 </table>
                 <textarea placeholder="Описание..." style="height: 200px;
-                            width: 300px; position: relative; left:-50px; margin: 20px;"></textarea>
+                            width: 300px; position: relative; left:-50px; margin: 20px;">{{ idea.description }}</textarea>
+
+                {% if rating or not 'user' in request.session %}
+                    рейтинг {{ rating }}
+                {% else %}
                 <table style="position: relative; left: 600px; top:-180px;">
                     <tr>
                         <td>5</td>
-                        <td style="position: relative; left: 5px; top:3px;"><input type="radio"></td>
+                        <td style="position: relative; left: 5px; top:3px;"><input type="radio" name="rating" value="5"></td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td style="position: relative; left: 5px; top:3px;"><input type="radio"></td>
+                        <td style="position: relative; left: 5px; top:3px;"><input type="radio" name="rating" value="4"></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td style="position: relative; left: 5px; top:3px;"><input type="radio"></td>
+                        <td style="position: relative; left: 5px; top:3px;"><input type="radio" name="rating" value="3"></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td style="position: relative; left: 5px; top:3px;"><input type="radio"></td>
+                        <td style="position: relative; left: 5px; top:3px;"><input type="radio" name="rating" value="2"></td>
                     </tr>
                         <td>1</td>
-                        <td style="position: relative; left: 5px; top:3px;"><input type="radio"></td>
+                        <td style="position: relative; left: 5px; top:3px;"><input type="radio" name="rating" value="1"></td>
                     </tr>
                 </table>
                 <button type="submit" name="estimate" id="add_new_idea"
                         style="position:relative; left:180px; top:-165px;">Оценить</button>
+                {% endif %}
+                <button type="submit" name="back" id="back"
+                        style="position:relative; left:180px; top:-165px;">Назад</button>
             </aside>
         </form>
     </section>

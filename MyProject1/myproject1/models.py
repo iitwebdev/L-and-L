@@ -65,8 +65,7 @@ class Idea(Base):
             if not message:
                 message = [u"Идея добавлена"]
                 idea.user = user
-                DBSession.add(idea)
-                DBSession.flush()
+                idea.save()
             return message
         else:
             return [u"Чтобы добавить идею нужно войти"]
@@ -99,6 +98,13 @@ class Idea(Base):
     def allIdeas(cls):
         return DBSession.query(Idea).all()
 
+    def save(self):
+        DBSession.add(self)
+        DBSession.flush()
+
+    @classmethod
+    def top10(cls):
+        return DBSession.query(Idea).order_by(Idea.rating.desc()).limit(10)
 
 class User(Base):
     __tablename__ = 'user'

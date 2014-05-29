@@ -1,3 +1,5 @@
+{% macro showIdeas(all_ideas, all_field=True)-%}
+
 <table border="1" style="position: relative; top: 30px; left: 30px;
                          text-align: center; line-height: 20px; ;">
     <tr style="background-color: #f0f0f0; font-weight: bold; padding: 50px">
@@ -5,7 +7,9 @@
         <th>Категория</th>
         <th>Описание</th>
         <th>Оценка</th>
+        {% if all_field %}
         <th>Дата заполнения</th>
+        {% endif %}
         <th>Автор</th>
         {#       {% if userPage is defined %}#}
         {#       <th>Оценивание</th>#}
@@ -13,11 +17,13 @@
     </tr>
     {% for idea in all_ideas %}
         <tr style="padding:20px;">
-            <td><a href="/description">{{ idea.name }}</a></td>
+            <td><a href="/description/{{ idea.id }}">{{ idea.name }}</a></td>
             <td>{{ idea.category }}</td>
             <td>{{ idea.description }}</td>
             <td>{{ idea.rating }}</td>
+            {% if all_field %}
             <td>{{ idea.date }}</td>
+            {% endif %}
             <td>{{ idea.user.userName }}</td>
             {#       {% if userPage is defined %}#}
             {#       <td>Оценивание</td>#}
@@ -25,3 +31,4 @@
         </tr>
     {% endfor %}
 </table>
+{%- endmacro %}

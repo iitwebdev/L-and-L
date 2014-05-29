@@ -1,4 +1,5 @@
 {% extends 'mytemplate.jinja2' %}
+{% from 'ideasTable.jinja2' import showIdeas %}
 {% block content %}
 
     <section role="banner">
@@ -47,19 +48,12 @@
                             </p>
                         {% endfor %}
                     {% endif %}
-                    <table border="2">
-                        <tr style="background-color: #f0f0f0; font-weight: bold">
-                            <td>Номер идеи</td>
-                            <td>Описание Идеи</td>
-                        </tr>
-                        <tr>
-                            <td>Идея №1</td>
-                            <td> От головы поможет только-ТОПОР</td>
-                        </tr>
-                    </table>
+
+                    {{ showIdeas(top10, False) }}
+
                 </aside>
 
-                {% include "ideasTable.jinja2" %}
+                {{ showIdeas(all_ideas) }}
 
 
                 <td></td>

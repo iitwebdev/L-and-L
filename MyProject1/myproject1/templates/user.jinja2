@@ -1,4 +1,5 @@
 {% extends 'mytemplate.jinja2' %}
+{% from 'ideasTable.jinja2' import showIdeas %}
 {% block content %}
     <section role="banner">
         <hgroup>
@@ -55,7 +56,7 @@
                 </h3>
             </hgroup>
 
-            <div class="list">{% include "ideasTable.jinja2" %}</div>
+            <div class="list">{{ showIdeas(all_ideas) }}</div>
         </div>
             </form>
     </section>
