@@ -341,12 +341,6 @@ section[role=userInfo] {
     line-height: 40px;
 }
 
-#descript {
-    position: relative;
-    height: 200px;
-    width: 300px
-}
-
 .ideasList{
     background-color:  #fafafa;
 }
