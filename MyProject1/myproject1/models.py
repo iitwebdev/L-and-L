@@ -1,6 +1,5 @@
 # coding: utf8
 import datetime
-from unicodedata import category
 
 from sqlalchemy import (
     Column,
@@ -10,8 +9,7 @@ from sqlalchemy import (
     DateTime,
     String,
     ForeignKey,
-    Table, or_, and_)
-from sqlalchemy import create_engine
+    Table, and_)
 
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -22,6 +20,7 @@ from sqlalchemy.orm import (
 from sqlalchemy.orm.exc import NoResultFound
 
 from zope.sqlalchemy import ZopeTransactionExtension
+
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 

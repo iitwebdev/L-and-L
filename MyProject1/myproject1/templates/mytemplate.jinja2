@@ -4,56 +4,57 @@
     <title>Idea</title>
     <link href="../static/mozg.png" rel="shortcut icon"/>
     <link rel="stylesheet" href="static/style.css">
-    <link  href="http://fonts.googleapis.com/css?family=Oswald:regular" rel="stylesheet" type="text/css" >
+    <link href="http://fonts.googleapis.com/css?family=Oswald:regular" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Junge' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="static/raphaelicons.css">
     <link rel="stylesheet" href="static/main.css">
     <script src="static/modernizr-2.5.2.min.js"></script>
     <script src="static/common.js"></script>
 
-{#    {% block head %}{% endblock %}#}
+    {#    {% block head %}{% endblock %}#}
 </head>
 <body>
-  <header class="clearfix">
-      <div class="container">
+<header class="clearfix">
+    <div class="container">
         <a id="logo" href="">Add your ideas!</a>
         <nav class="clearfix">
-          <ul role="navigation" id="nav">
-            <li class="selected" >
-              <a href="/"><span class="icon">{{S}}</span>Главная</a>
-            </li>
-            <li class="selected">
-              <a href="/page"><span class="icon">{{V}}</span>Поиск идеи</a>
-            </li>
-            <li class="selected">
-                <a href="/user2"><span class="icon">{{ T }}</span> Мои идеи</a>
-            </li>
-          </ul>
+            <ul role="navigation" id="nav">
+                <li class="selected">
+                    <a href="/"><span class="icon">{{ S }}</span>Главная</a>
+                </li>
+                <li class="selected">
+                    <a href="/page"><span class="icon">{{ V }}</span>Поиск идеи</a>
+                </li>
+                <li class="selected">
+                    <a href="/user"><span class="icon">{{ T }}</span> Мои идеи</a>
+                </li>
+            </ul>
         </nav>
-      </div>
-      {% if 'user'in request.session %}
+    </div>
+    {% if 'user'in request.session %}
         <h3 class="hello">Привет, {{ request.session['user'].userName }} !</h3>
-          <button
-                  style="position: relative; left:720px; top: -30px; text-align: center; margin: 10px;line-height: 20px;"
-                  onclick="logout();">Выход </button>
-      {% endif %}
-  </header>
+        <button
+                style="position: relative; left:720px; top: -30px; text-align: center; margin: 10px;line-height: 20px;"
+                onclick="logout();">Выход
+        </button>
+    {% endif %}
+</header>
 
-  <div id="content">
-        {% block content %}
+<div id="content">
+    {% block content %}
 
-        {% endblock %}
+    {% endblock %}
 </div>
 
-  <footer role="contentinfo">
-      <p>
+<footer role="contentinfo">
+    <p>
         <span class="leftfooter"> <a href="#">Перейти на верх страницы</a></span>
-        <span class="rightfooter" >
+        <span class="rightfooter">
             <p>Тут что нибудь</p>
         </span>
-      </p>
-  </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="static/jquery-1.7.1.min.js"><\/script>')</script>
-  <script src="static/script.js"></script>
+    </p>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="static/jquery-1.7.1.min.js"><\/script>')</script>
+<script src="static/script.js"></script>
 </body>

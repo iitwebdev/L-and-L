@@ -1,30 +1,27 @@
-
 <table border="1" style="position: relative; top: 30px; left: 30px;
                          text-align: center; line-height: 20px; ;">
-   <tr style="background-color: #f0f0f0; font-weight: bold; padding: 50px">
-       <th>Название</th>
-       <th>Категория</th>
-       <th>Описание</th>
-       <th>Оценка</th>
-       <th>Дата заполнения</th>
-       <th>Автор</th>
-{#       {% if userPage is defined %}#}
-{#       <th>Оценивание</th>#}
-{#       {% endif %}#}
-   </tr>
-   {% for idea in all_ideas %}
-   <tr style="padding:20px;">
-       <td>{{ idea.name }}</td>
-   <tr>
-       <td><a href="/description">{{ idea.name }}</a></td>
-       <td>{{ idea.category }}</td>
-       <td>{{ idea.description }}</td>
-       <td>{{ idea.rating }}</td>
-       <td>{{ idea.date }}</td>
-       <td>{{ idea.user.userName }}</td>
-{#       {% if userPage is defined %}#}
-{#       <td>Оценивание</td>#}
-{#       {% endif %}#}
-   </tr>
-   {% endfor %}
+    <tr style="background-color: #f0f0f0; font-weight: bold; padding: 50px">
+        <th>Название</th>
+        <th>Категория</th>
+        <th>Описание</th>
+        <th>Оценка</th>
+        <th>Дата заполнения</th>
+        <th>Автор</th>
+        {#       {% if userPage is defined %}#}
+        {#       <th>Оценивание</th>#}
+        {#       {% endif %}#}
+    </tr>
+    {% for idea in all_ideas %}
+        <tr style="padding:20px;">
+            <td><a href="/description">{{ idea.name }}</a></td>
+            <td>{{ idea.category }}</td>
+            <td>{{ idea.description }}</td>
+            <td>{{ idea.rating }}</td>
+            <td>{{ idea.date }}</td>
+            <td>{{ idea.user.userName }}</td>
+            {#       {% if userPage is defined %}#}
+            {#       <td>Оценивание</td>#}
+            {#       {% endif %}#}
+        </tr>
+    {% endfor %}
 </table>

@@ -10,6 +10,7 @@ def bindUser(fn):
         if 'user' in request.session:
             DBSession.add(request.session['user'])
         return fn(request)
+
     return wrapped
 
 
@@ -34,7 +35,7 @@ def page_view(request):
                 'all_ideas': Idea.searchIdea(request) if 'search' in request.POST else Idea.allIdeas()}
     return response
 
-"""
+
 @view_config(route_name='user', renderer='templates/user.jinja2')
 @bindUser
 def user_view(request):
@@ -46,18 +47,19 @@ def user_view(request):
         response["messages"] = Idea.addNew(request)
     response["categories"] = Idea.getCategories()
     return response
-"""
-@view_config(route_name='user2',renderer='templates/user2.jinja2')
-@bindUser
-def user_view2(request):
-    user2 = 'user' in request.session and request.session['user']
-    if user2:
-        DBSession.add(user2)
-    response = {'all_ideas': user2.ideas if user2 else []}
-    if 'addIdea' in request.POST:
-        response["messages"] = Idea.addNew(request)
-    response["categories"] = Idea.getCategories()
-    return response
+
+# @view_config(route_name='user2', renderer='templates/user.jinja2')
+# @bindUser
+# def user_view2(request):
+#     user2 = 'user' in request.session and request.session['user']
+#     if user2:
+#         DBSession.add(user2)
+#     response = {'all_ideas': user2.ideas if user2 else []}
+#     if 'addIdea' in request.POST:
+#         response["messages"] = Idea.addNew(request)
+#     response["categories"] = Idea.getCategories()
+#     return response
+
 
 @view_config(route_name='logout', renderer='string')
 def logout(request):
@@ -67,6 +69,7 @@ def logout(request):
         return "error"
     else:
         return 'OK'
+
 
 @view_config(route_name='description', renderer='templates/description.jinja2')
 def description_view(request):

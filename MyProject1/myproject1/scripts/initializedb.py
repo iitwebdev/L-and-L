@@ -1,6 +1,5 @@
 import os
 import sys
-import transaction
 
 from sqlalchemy import engine_from_config
 
