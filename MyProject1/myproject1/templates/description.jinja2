@@ -1,0 +1,86 @@
+{% extends 'mytemplate.jinja2' %}
+{% block content %}
+<section role="banner">
+       <hgroup>
+           <h1 style="position: relative; top:20px;">Идея</h1>
+       </hgroup>
+    </section>
+    <section role="container clearfix">
+        <form method="POST">
+            <aside role="complementary" style="text-align: center;">
+                <div class="idea_info">
+                    <p class="orange_font">{{ ideasName }}</p>
+                    <div style="height: 5px"></div>
+                    <table class="new_idea_append">
+                        <tr>
+                            <td>Название</td>
+                            <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"
+                                       style="width: 130px;position: relative;"></td>
+                        </tr>
+                        <tr>
+                            <td>Категория</td>
+                            <td>
+                                <input type="text" id="categoryName" style="position: relative; width: 130px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Автор: </td>
+                            <td>имя_пользователя</td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <textarea name="description" id="descript" style="top:10px;">Описание...</textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="position: relative; left:300px; margin: 20px;">
+                        <tr>
+                            <td>
+                                5
+                            </td>
+                            <td>
+                                <input type="radio">
+                            </td>
+
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                <input type="radio">
+                            </td>
+
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                <input type="radio">
+                            </td>
+
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                <input type="radio">
+                            </td>
+
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                <input type="radio">
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <button type="submit" name="estimate" style="position: relative; left:600px;">Оценить идею</button>
+
+                    <div class="clear"></div>
+                </div>
+            </aside>
+        </form>
+    </section>
+
+    <div class="gap" style="height: 100px"></div>
+{% endblock %}

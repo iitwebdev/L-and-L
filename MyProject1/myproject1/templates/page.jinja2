@@ -1,12 +1,13 @@
 {% extends 'mytemplate.jinja2' %}
 {% block content %}
 
-   <section role="banner">
-       <hgroup>
-           <h1>это что.</h1>
-           <h2>Часть поиска</h2>
+    <section role="banner">
+        <hgroup>
+            <h1>это что.</h1>
 
-       </hgroup>
+            <h2>Часть поиска</h2>
+
+        </hgroup>
     </section>
 
    <section class="container clearfix">
@@ -35,6 +36,33 @@
                 </tr>
             </table>
         </aside>
+
+    <section class="container clearfix">
+        <form method="POST">
+            <aside role="complementary">
+                <h2 style="color: #3891cf">Поиск идеи</h2>
+                <table class="search">
+                    <tr>
+                        <td>Название</td>
+                        <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"></td>
+                    </tr>
+                    <tr>
+                        <td>Категория</td>
+                        <td><select name="category" id="category">
+                            <option value=""></option>
+                            {% for category in categories %}
+                                <option value="{{ category }}">{{ category }}</option>
+                            {% endfor %}
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <button type="submit" name="search" id="search">Найти</button>
+                        </td>
+                    </tr>
+                </table>
+            </aside>
+
         </form>
 
 
@@ -43,11 +71,11 @@
             {% if messages is defined %}
                 {% for message in messages %}
                     <p>
-                     {{ message }}
+                        {{ message }}
                     </p>
                 {% endfor %}
             {% endif %}
-            <table border="2" >
+            <table border="2">
                 <tr style="background-color: #f0f0f0; font-weight: bold">
                     <td>Номер идеи</td>
                     <td>Описание Идеи</td>
@@ -57,13 +85,12 @@
                     <td> От головы поможет только-ТОПОР</td>
                 </tr>
             </table>
-
         </aside>
 
-{% include "ideasTable.jinja2" %}
+        {% include "ideasTable.jinja2" %}
 
 
-   <td> </td>
+        <td></td>
 
-   </section>
+    </section>
 {% endblock %}

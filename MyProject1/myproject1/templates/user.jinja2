@@ -33,7 +33,7 @@
                     <td>Категория</td>
                     <td><select name="category" id="category" style="position: relative; left: 20px; width: 155px">
                         {% for category in categories %}
-                               <option value="category">{{ category }}</option>
+                               <option value="{{ category }}">{{ category }}</option>
                         {% endfor %}
                         </select>
                     </td>
@@ -53,6 +53,7 @@
             </table>
 
             <button type="submit" name="addIdea" style="position: absolute; left: 800px; top: 220px">Добавить</button>
+
 
             <div class="clear"></div>
         </div>
