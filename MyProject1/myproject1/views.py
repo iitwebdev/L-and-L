@@ -60,4 +60,5 @@ def logout(request):
 
 @view_config(route_name='description', renderer='templates/description.jinja2')
 def description_view(request):
+
     return {'categories': ""}
