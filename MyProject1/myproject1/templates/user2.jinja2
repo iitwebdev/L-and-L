@@ -8,39 +8,40 @@
     </section>
 
    <section class="container clearfix">
-   <form method="POST">
-        <aside role="complementary" style="text-align: center;">
-            <h2 style="color: #3891cf">Добавьте свою идею</h2>
-            <table class="new_idea_append">
-                <tr>
-                    <td>Название</td>
-                    <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"
-                               style="width: 130px;position: relative; left:100px;"></td>
-                </tr>
-                <tr>
-                    <td>Категория</td>
-                    <td><select name="category" id="category" style="width: 135px; position: relative; left:100px;">
-                    <option value=""></option>
-                        {% for category in categories %}
-                        <option value="{{ category }}">{{ category }}</option>
-                        {% endfor %}
-                    </select></td>
-                </tr>
-            </table>
-            <textarea placeholder="Описание..." style="height: 200px;
-                        width: 300px; position: relative; margin: 20px;"></textarea>
-            <button type="submit" name="addIdea" id="add_new_idea">Добавить</button>
-        </aside>
-        </form>
-   <div class = "ideasList">
-        <hgroup>
-            <h3 style="color: #f9b555; font: Helvetica, Arial, Tahoma; text-align: center;">
-                Список моих идей
-            </h3>
-        </hgroup>
+       <form method="POST">
+            <aside role="complementary" style="text-align: center;">
+                <h2 style="color: #3891cf">Добавьте свою идею</h2>
+                <table class="new_idea_append">
+                    <tr>
+                        <td>Название</td>
+                        <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"
+                                   style="width: 130px;position: relative; left:100px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Категория</td>
+                        <td><select name="category" id="category" style="width: 135px; position: relative; left:100px;">
+                        <option value=""></option>
+                            {% for category in categories %}
+                            <option value="{{ category }}">{{ category }}</option>
+                            {% endfor %}
+                        </select></td>
+                    </tr>
+                </table>
+                <textarea placeholder="Описание..." style="height: 200px;
+                            width: 300px; position: relative; margin: 20px;"></textarea>
+                <button type="submit" name="addIdea" id="add_new_idea">Добавить</button>
+            </aside>
+       </form>
 
-        <div class="list">{% include "ideasTable.jinja2" %}</div>
-   </div>
+       <div class = "ideasList">
+            <hgroup>
+                <h3 style="color: #f9b555; font: Helvetica, Arial, Tahoma; text-align: center;">
+                    Список моих идей
+                </h3>
+            </hgroup>
+
+            <div class="list">{% include "ideasTable.jinja2" %}</div>
+       </div>
 
    </section>
 {% endblock %}

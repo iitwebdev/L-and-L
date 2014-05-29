@@ -34,7 +34,7 @@ def page_view(request):
                 'all_ideas': Idea.searchIdea(request) if 'search' in request.POST else Idea.allIdeas()}
     return response
 
-
+"""
 @view_config(route_name='user', renderer='templates/user.jinja2')
 @bindUser
 def user_view(request):
@@ -46,7 +46,7 @@ def user_view(request):
         response["messages"] = Idea.addNew(request)
     response["categories"] = Idea.getCategories()
     return response
-
+"""
 @view_config(route_name='user2',renderer='templates/user2.jinja2')
 @bindUser
 def user_view2(request):
@@ -68,7 +68,7 @@ def logout(request):
     else:
         return 'OK'
 
-
 @view_config(route_name='description', renderer='templates/description.jinja2')
 def description_view(request):
     return {'categories': ""}
+
