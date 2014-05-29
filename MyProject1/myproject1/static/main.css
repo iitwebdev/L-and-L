@@ -3,287 +3,242 @@ button,
 input,
 select,
 textarea {
-    color: #444;
+  color: #444;
 }
-
 ::-moz-selection {
-    background: #ffcc44;
-    color: White;
-    text-shadow: none;
+  background: #ffcc44;
+  color: White;
+  text-shadow: none;
 }
-
 ::selection {
-    background: #ffcc44;
-    color: White;
-    text-shadow: none;
+  background: #ffcc44;
+  color: White;
+  text-shadow: none;
 }
-
 body {
-    font: 13px/1.4em Helvetica, Arial, Tahoma;
+  font: 13px/1.4em Helvetica, Arial, Tahoma;
 }
-
 h1, h2 {
-    font-family: 'Oswald', 'Century Gothic', 'Trebuchet MS', Tahoma;
+  font-family: 'Oswald', 'Century Gothic', 'Trebuchet MS', Tahoma;
 }
-
 h3, h4 {
-    font-family: Helvetica, Arial, Tahoma;
-    color: #10253d;
+  font-family: Helvetica, Arial, Tahoma;
+  color: #10253d;
 }
-
 h1 {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
-
 h2 {
-    font-size: 2em;
-    line-height: 1em;
-    color: #3891cf;
+  font-size: 2em;
+  line-height: 1em;
+  color: #3891cf;
 }
-
 h3 {
-    font-size: 1.6em;
-    margin: 0 0 10px;
+  font-size: 1.6em;
+  margin: 0 0 10px;
 }
-
 ul, ol {
-    margin: 1em 0;
-    padding: 0 0 0 30px;
+  margin: 1em 0;
+  padding: 0 0 0 30px;
 }
-
 dd {
-    margin: 0 0 0 40px;
+  margin: 0 0 0 40px;
 }
-
 nav ul, nav ol {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
 }
-
 a {
-    color: #dda100;
-    text-decoration: none;
+  color: #dda100;
+  text-decoration: none;
 }
-
 a:focus, a:hover, a:active {
-    outline: 0 none;
-    color: #3891cf;
+  outline: 0 none;
+  color: #3891cf;
 }
-
 strong {
-    color: #000 !important;
+  color: #000 !important;
 }
-
 /*================================================
     LAYOUTS
 ================================================*/
 .container {
-    margin: 0 auto;
-    width: 960px;
+  margin: 0 auto;
+  width: 960px;
 }
-
 span.icon {
-    text-transform: none !important;
+  text-transform: none !important;
 }
-
 header {
-    background: url(../static/polosa.png) transparent;
-    padding: 15px 0 0;
+  background: url(../static/polosa.png) transparent;
+  padding: 15px 0 0;
 }
-
 #logo {
-    color: #3891cf;
-    font: 30px 'Oswald', 'Century Gothic', 'Trebuchet MS', Tahoma;
-    height: 32px;
-    display: block;
-    float: left;
-    margin: 15px 0 0;
+  color: #3891cf;
+  font: 30px 'Oswald', 'Century Gothic', 'Trebuchet MS', Tahoma;
+  height: 32px;
+  display: block;
+  float: left;
+  margin: 15px 0 0;
 }
-
 nav {
-    float: right;
-    margin: 15px 0 0;
-    clear: both;
+  float: right;
+  margin: 15px 0 0;
+  clear: both;
 }
-
 ul[role=navigation] {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font: 0.9em/1.67em Helvetica, Arial, Tahoma;
-    text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font: 0.9em/1.67em Helvetica, Arial, Tahoma;
+  text-transform: uppercase;
 }
-
 ul[role=navigation] li {
-    list-style: none;
-    float: left;
-    margin: 0 0 0 10px;
+  list-style: none;
+  float: left;
+  margin: 0 0 0 10px;
 }
-
 ul[role=navigation] li a {
-    background: #f9b555;
-    /*border: 1px solid #2495b4;
-    border-bottom: 0;*/
-    -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
-    -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
-    -moz-border-radius: 3px 3px 0 0;
-    -webkit-border-radius: 3px 3px 0 0;
-    border-radius: 3px 3px 0 0;
-    color: #38393b;
-    display: block;
-    padding: 7px 20px 5px;
+  background: #f9b555;
+  /*border: 1px solid #2495b4;
+  border-bottom: 0;*/
+  -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) inset;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  color: #38393b;
+  display: block;
+  padding: 7px 20px 5px;
 }
-
-ul[role=navigation] li a:hover {
-    background-color: #f9ca6f
-}
-
+ul[role=navigation] li a:hover {background-color: #f9ca6f}
 ul[role=navigation] li a:focus
 ul[role=navigation] li a:active
 ul[role=navigation] li a.activePage {
-    border-color: #10253d;
-    color: #2fe1ff;
-    -moz-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
-    -webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
-    box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+  border-color: #10253d;
+  color: #2fe1ff;
+  -moz-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
 }
-
 ul[role=navigation] li a .icon {
-    padding-right: 10px;
-    font-size: 17px;
+  padding-right: 10px;
+  font-size: 17px;
 }
 
 section[role=banner] {
-    background: url(../static/chist.png);
-    border-bottom: 1px solid #dfe9f2;
-    height: 100px;
+  background: url(../static/chist.png);
+  border-bottom: 1px solid #dfe9f2;
+  height: 100px;
 }
-
 section[role=banner] hgroup {
-    background: url(../static/chist.png);
-    -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-    -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-    box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
-    margin: 0 0 30px;
-    padding: 10px 0;
+  background: url(../static/chist.png);
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px, rgba(255, 255, 255, 0.7) 0 10px 10px;
+  margin: 0 0 30px;
+  padding: 10px 0;
 }
-
 section[role=banner] hgroup h1, section[role=banner] hgroup h2 {
-    margin: 0 auto;
-    width: 960px;
-    color: #f9b555;
-    font: bold 30px Helvetica, Arial, Tahoma;
-    text-align: center;
-    text-shadow: #000 0 1px 0;
+  margin: 0 auto;
+  width: 960px;
+  color: #f9b555;
+  font: bold 30px Helvetica, Arial, Tahoma;
+  text-align: center;
+  text-shadow: #000 0 1px 0;
 }
-
 section[role=banner] hgroup h2 {
-    font-size: 20px;
-    font-weight: normal;
+  font-size: 20px;
+  font-weight: normal;
 }
-
 section[role=banner] article[role=main] {
-    margin: 0 auto;
-    width: 960px;
-    padding: 0 0 30px;
+  margin: 0 auto;
+  width: 960px;
+  padding: 0 0 30px;
 }
-
 section[role=banner] article[role=main] .post {
-    float: left;
-    width: 55%;
-    color: #222;
+  float: left;
+  width: 55%;
+  color: #222;
 }
-
 section[role=banner] article[role=main] .post h2 {
-    font-size: 40px;
-    margin: 0 0 10px;
-    text-shadow: rgba(0, 0, 0, 0.8) 0 1px 0;
+  font-size: 40px;
+  margin: 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.8) 0 1px 0;
 }
-
 section[role=banner] article[role=main] aside {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    float: right;
-    overflow: hidden;
-    width: 40%;
-    position: relative;
-    border: 3px solid rgba(0, 0, 0, 0.03);
-    padding: 2px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  float: right;
+  overflow: hidden;
+  width: 40%;
+  position: relative;
+  border: 3px solid rgba(0, 0, 0, 0.03);
+  padding: 2px;
 }
 
 section[role=banner] article[role=main] aside:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: rgba(255, 255, 255, 0.15);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-    background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
-    -moz-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -6px 0 rgba(0, 0, 0, 0.3), inset 0 -7px 0 rgba(255, 255, 255, 0.2);
-    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -6px 0 rgba(0, 0, 0, 0.3), inset 0 -7px 0 rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -6px 0 rgba(0, 0, 0, 0.3), inset 0 -7px 0 rgba(255, 255, 255, 0.2);
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.15);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  -moz-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -6px 0 rgba(0, 0, 0, 0.3), inset 0 -7px 0 rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -6px 0 rgba(0, 0, 0, 0.3), inset 0 -7px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -6px 0 rgba(0, 0, 0, 0.3), inset 0 -7px 0 rgba(255, 255, 255, 0.2);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
-
 section[role=banner] article[role=main] aside img {
-    width: 100%;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
+  width: 100%;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
-
-.more-link {
-    /*Параметры отображения надписи перейти на верх*/
-    color: #000099;
-    font-weight: bold;
-    white-space: nowrap;
+.more-link { /*Параметры отображения надписи перейти на верх*/
+  color: #000099;
+  font-weight: bold;
+  white-space: nowrap;
 }
-
 aside[role=complementary] {
-    background: #fafafa;
-    display: table-cell;
-    padding: 10px 20px;
-    width: 1000px;
+  background: #fafafa;
+  display: table-cell;
+  padding: 10px 20px;
+  width: 1000px;
 }
-
 aside[role=complementary] h2 {
-    font-size: 20px;
-    color: black;
+  font-size: 20px;
+  color: black;
 }
-
 aside[role=complementary] p {
-    font-size: 11px;
+  font-size: 11px;
 }
-
 .content {
-    display: table-cell;
-    padding: 10px 0 50px 30px;
+  display: table-cell;
+  padding: 10px 0 50px 30px;
 }
-
 .post-list li {
-    list-style: none;
-    border-bottom: 2px dotted #eaeaea;
-    margin: 0 0 30px;
+  list-style: none;
+  border-bottom: 2px dotted #eaeaea;
+  margin: 0 0 30px;
 }
-
 .post-list li:last-child {
-    border: 0;
-    margin: 0;
+  border: 0;
+  margin: 0;
 }
-
 section[role="banner"] article[role="main"].contact .post {
-    width: 35%;
+  width: 35%;
 }
-
 footer[role=contentinfo] {
     position: relative;
     background: url(../static/polosa.png);
@@ -296,35 +251,33 @@ footer[role=contentinfo] {
     margin-top: 800px;
 
 }
-
 footer[role=contentinfo] p {
-    margin: 0 auto;
-    font: 11px/16px Helvetica, Arial, Tahoma;
-    overflow: hidden;
+  margin: 0 auto;
+  font: 11px/16px Helvetica, Arial, Tahoma;
+  overflow: hidden;
 
 }
-
 footer[role=contentinfo] p .leftfooter {
-    text-align: left;
+  text-align: left;
 }
 
-footer[role=contentinfo] p.rightfooter {
+footer[role=contentinfo] p.rightfooter{
     text-align: right;
 }
 
 section[role=userInfo] {
-    background-color: #f5f5f5;
-    /*background: url("../static/chist.png");*/
-    width: 95%;
+  background-color: #f5f5f5;
+  /*background: url("../static/chist.png");*/
+  width: 95%;
     left: 30px;
-    height: 450px;
-    position: absolute;
-    padding: 5px;
+  height: 450px;
+  position: absolute;
+  padding: 5px;
 }
 
 .leftInfo {
     position: absolute;
-    background: #faf7f7; /*url("../static/polosa.png");*/
+    background: #faf7f7;/*url("../static/polosa.png");*/
     width: 300px;
     height: 450px;
     float: left;
@@ -342,7 +295,7 @@ section[role=userInfo] {
     list-style-type: none;
 }
 
-.rightInfo {
+.rightInfo{
     font: bold 15px Helvetica, Arial, Tahoma;
     color: #3891cf;
     width: 100%;
@@ -358,7 +311,6 @@ section[role=userInfo] {
     left: 30px;
     top: 455px;
 }
-
 .orange_font {
     font: bold 24px Helvetica, Arial, Tahoma;
     color: #f9b555;
@@ -385,7 +337,7 @@ section[role=userInfo] {
 #descr {
     position: relative;
     left: 200px;
-    top: 10px;
+    top:10px;
     line-height: 40px;
 }
 
@@ -395,11 +347,11 @@ section[role=userInfo] {
     width: 300px
 }
 
-.ideasList {
-    background-color: #fafafa;
+.ideasList{
+    background-color:  #fafafa;
 }
 
-.new_idea_append {
+.new_idea_append{
     line-height: 35px;
     text-align: left;
     margin: 10px;
@@ -407,7 +359,8 @@ section[role=userInfo] {
     left: 250px;
 }
 
-#add_new_idea {
+#add_new_idea
+{
     margin: 10px;
     position: relative;
     top: 10px;
@@ -415,32 +368,35 @@ section[role=userInfo] {
     line-height: 30px;
 }
 
-.list {
+.list
+{
     position: relative;
     left: 200px;
-    width: 500px;
+    width:500px;
     height: 300px
 }
 
-.hello {
+.hello
+{
     color: #41b8f7;
     position: relative;
     top: 200px;
-    left: -100px;
+    left:-100px;
     margin: 10px;
 }
 
-.search {
+.search
+{
 
 }
 
-div [role="complementary1"] {
+div [role="complementary1"]{
     margin: 20px;
     float: left;
-    background-color: #fafafa;
+    background-color:  #fafafa;
 }
 
-.idea_info {
+.idea_info{
     line-height: 35px;
     text-align: left;
     margin: 10px;
@@ -450,9 +406,9 @@ div [role="complementary1"] {
 }
 
 .message {
-    /*position: absolute;*/
-    /*left: 600px;*/
-    /*top: 500px;*/
+    position: absolute;
+    left: 600px;
+    top: 500px;
     color: #ff563a;
 }
 
