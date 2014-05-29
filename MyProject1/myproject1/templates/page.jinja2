@@ -16,11 +16,12 @@
             <table class="search">
                 <tr>
                     <td>Название</td>
-                    <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"></td>
+                    <td style="width: 130px;"><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"
+                               ></td>
                 </tr>
                 <tr>
                     <td>Категория</td>
-                    <td><select name="category" id="category">
+                    <td ><select name="category" id="category" >
                     <option value=""></option>
                         {% for category in categories %}
                         <option value="{{ category }}">{{ category }}</option>

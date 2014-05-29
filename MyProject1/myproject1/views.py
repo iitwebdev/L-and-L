@@ -47,6 +47,17 @@ def user_view(request):
     response["categories"] = Idea.getCategories()
     return response
 
+@view_config(route_name='user2',renderer='templates/user2.jinja2')
+@bindUser
+def user_view2(request):
+    user2 = 'user' in request.session and request.session['user']
+    if user2:
+        DBSession.add(user2)
+    response = {'all_ideas': user2.ideas if user2 else []}
+    if 'addIdea' in request.POST:
+        response["messages"] = Idea.addNew(request)
+    response["categories"] = Idea.getCategories()
+    return response
 
 @view_config(route_name='logout', renderer='string')
 def logout(request):
