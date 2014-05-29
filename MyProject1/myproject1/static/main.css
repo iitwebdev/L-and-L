@@ -406,9 +406,9 @@ div [role="complementary1"]{
 }
 
 .message {
-    position: absolute;
-    left: 600px;
-    top: 500px;
+    /*position: absolute;*/
+    /*left: 600px;*/
+    /*top: 500px;*/
     color: #ff563a;
 }
 
