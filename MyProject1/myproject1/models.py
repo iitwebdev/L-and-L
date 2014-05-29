@@ -25,24 +25,6 @@ from zope.sqlalchemy import ZopeTransactionExtension
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 
-# Base = declarative_base()
-# engine = create_engine('sqlite:///gen_tree.db')
-# DBSession.configure(bind=engine)
-# Base.metadata.bind = engine
-# Base.metadata.create_all(engine)
-
-
-# def get_base():
-#     return Base
-#
-#
-# def get_db_session():
-#     return DBSession()
-#
-#
-# def get_engine():
-#     return engine
-
 likes = Table('likes', Base.metadata,
               Column('idea_id', Integer, ForeignKey('ideas.id', onupdate='CASCADE', ondelete='CASCADE')),
               Column('user_id', Integer, ForeignKey('user.id', onupdate='CASCADE', ondelete='CASCADE')))
