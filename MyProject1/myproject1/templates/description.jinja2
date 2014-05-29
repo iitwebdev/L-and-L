@@ -1,41 +1,5 @@
 {% extends 'mytemplate.jinja2' %}
 {% block content %}
-    <section role="banner">
-        <hgroup>
-            <h1 style="position: relative; top:20px;">Идея</h1>
-        </hgroup>
-    </section>
-    <section role="container clearfix">
-        <form method="POST">
-            <aside role="complementary" style="text-align: center;">
-                <div class="idea_info">
-                    <table class="new_idea_append">
-                        <tr>
-                            <td>Название</td>
-                            <td><input type="text" name="ideasName" id="ideasName" value="{{ ideasName }}"
-                                       style="width: 130px;position: relative;"></td>
-                        </tr>
-                        <tr>
-                            <td>Категория</td>
-                            <td>
-                                <input type="text" id="categoryName" style="position: relative; width: 130px;">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Автор: </td>
-                            <td>имя_пользователя</td>
-                        </tr>
-                    </table>
-                    <textarea name="description" id="descript" style="top:10px; position: relative;">Описание...</textarea>
-                    <table style="position: relative; left:300px; margin: 20px;">
-                        <tr>
-                            <td>
-                                5
-                            </td>
-                            <td>
-                                <input type="radio">
-                            </td>
-
    <section class="container clearfix">
        <form method="POST">
             <aside role="complementary" style="text-align: center;">
